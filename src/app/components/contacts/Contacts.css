@@ -1,0 +1,249 @@
+.contacts {
+    padding: 5rem 2rem;
+    background: white;
+}
+
+.contacts-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contacts-title {
+    font-size: 3rem;
+    color: #000;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.contacts-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: #cc0000;
+}
+
+.contacts-tagline {
+    text-align: center;
+    color: #cc0000;
+    font-size: 1.2rem;
+    margin: 1.5rem 0 3rem 0;
+    font-weight: 500;
+}
+
+.contacts-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.address-card {
+    background: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 15px;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.address-card:hover {
+    transform: translateX(5px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.address-header {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.address-icon {
+    font-size: 1.8rem;
+}
+
+.address-header h3 {
+    color: #000;
+    font-size: 1.3rem;
+}
+
+.address-location {
+    color: #555;
+    margin-bottom: 0.8rem;
+    line-height: 1.5;
+    font-size: 1rem;
+}
+
+.address-phone {
+    display: inline-block;
+    color: #cc0000;
+    text-decoration: none;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+}
+
+.map-link {
+    display: inline-block;
+    color: #666;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+    margin-left: 0.5rem;
+}
+
+.map-link:hover {
+    color: #cc0000;
+}
+
+.delivery-note {
+    background: linear-gradient(135deg, #cc0000 0%, #990000 100%);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.delivery-icon {
+    font-size: 2.5rem;
+}
+
+.delivery-note strong {
+    font-size: 1.1rem;
+    display: block;
+    margin-bottom: 0.3rem;
+}
+
+.delivery-note p {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.maps-section h3 {
+    font-size: 1.8rem;
+    color: #000;
+    margin-bottom: 1.5rem;
+}
+
+.maps-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.map-card {
+    background: #f9f9f9;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.map-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.map-embed {
+    width: 100%;
+    height: 200px;
+}
+
+.map-label {
+    padding: 0.8rem;
+    text-align: center;
+    color: #555;
+    font-size: 0.9rem;
+    background: white;
+}
+
+.social-section {
+    margin-top: 2rem;
+}
+
+.social-section h3 {
+    font-size: 1.5rem;
+    color: #000;
+    margin-bottom: 1rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.social-link {
+    flex: 1;
+    padding: 0.8rem;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.social-link.instagram {
+    background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+    color: white;
+}
+
+.social-link.telegram {
+    background: #0088cc;
+    color: white;
+}
+
+.social-link.youtube {
+    background: #ff0000;
+    color: white;
+}
+
+.social-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 968px) {
+    .contacts-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .contacts-title {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .contacts {
+        padding: 3rem 1rem;
+    }
+
+    .contacts-title {
+        font-size: 2rem;
+    }
+
+    .contacts-tagline {
+        font-size: 1rem;
+    }
+
+    .address-header h3 {
+        font-size: 1.1rem;
+    }
+
+    .maps-section h3 {
+        font-size: 1.5rem;
+    }
+
+    .social-links {
+        flex-direction: column;
+    }
+}

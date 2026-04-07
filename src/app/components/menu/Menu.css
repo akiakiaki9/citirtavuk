@@ -1,0 +1,265 @@
+.menu {
+    padding: 5rem 2rem;
+    background: white;
+}
+
+.menu-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.menu-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.menu-title {
+    font-size: 3rem;
+    color: #000;
+    margin-bottom: 0.5rem;
+    position: relative;
+    display: inline-block;
+}
+
+.menu-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: #cc0000;
+}
+
+.menu-subtitle {
+    color: #666;
+    font-size: 1.2rem;
+    margin-top: 1.5rem;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 2rem;
+}
+
+.menu-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.menu-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(204, 0, 0, 0.15);
+}
+
+.menu-card-image {
+    height: 280px;
+    background: linear-gradient(135deg, #fff5f5 0%, #ffe6e6 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.product-image-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.product-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.menu-card:hover .product-image {
+    transform: scale(1.05);
+}
+
+.image-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.placeholder-icon {
+    font-size: 5rem;
+}
+
+.placeholder-text {
+    font-size: 0.85rem;
+    color: #999;
+    background: rgba(255,255,255,0.8);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+}
+
+.menu-card-content {
+    padding: 1.5rem;
+}
+
+.menu-item-name {
+    font-size: 1.8rem;
+    color: #000;
+    margin-bottom: 0.5rem;
+}
+
+.menu-item-description {
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+}
+
+.weight-selector {
+    margin-bottom: 1.5rem;
+}
+
+.weight-selector label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.8rem;
+}
+
+.weight-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.weight-btn {
+    padding: 0.5rem 1rem;
+    background: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: all 0.2s ease;
+}
+
+.weight-btn:hover {
+    background: #ffe6e6;
+    border-color: #cc0000;
+}
+
+.weight-btn.active {
+    background: #cc0000;
+    color: white;
+    border-color: #cc0000;
+}
+
+.menu-item-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+}
+
+.price-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.menu-item-price {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #cc0000;
+}
+
+.price-per-kg {
+    font-size: 0.75rem;
+    color: #888;
+}
+
+.menu-item-price-placeholder {
+    font-size: 0.9rem;
+    color: #999;
+}
+
+.add-to-cart-btn {
+    background: #cc0000;
+    color: white;
+    border: none;
+    padding: 0.7rem 1.3rem;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+.add-to-cart-btn:hover {
+    background: #990000;
+    transform: scale(1.05);
+}
+
+.add-to-cart-btn.added {
+    background: #28a745;
+}
+
+@media (max-width: 768px) {
+    .menu {
+        padding: 3rem 1rem;
+    }
+
+    .menu-title {
+        font-size: 2rem;
+    }
+
+    .menu-subtitle {
+        font-size: 1rem;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-card-image {
+        height: 220px;
+    }
+
+    .menu-item-name {
+        font-size: 1.5rem;
+    }
+
+    .weight-buttons {
+        gap: 0.4rem;
+    }
+
+    .weight-btn {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.75rem;
+    }
+
+    .menu-item-price {
+        font-size: 1.2rem;
+    }
+
+    .add-to-cart-btn {
+        padding: 0.6rem 1rem;
+        font-size: 0.85rem;
+    }
+    
+    .price-per-kg {
+        font-size: 0.7rem;
+    }
+}
